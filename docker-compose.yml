@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  api:
+    build: ./
+    image: nodeprod
+    ports:
+      - 3000:300
+    restart: always
