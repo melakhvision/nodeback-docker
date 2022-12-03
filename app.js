@@ -10,6 +10,9 @@ app.use(cors(corsOptions));
 // parse requests of content-type - application/json
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("THE API IS WORKING FINE");
+});
 app.post("/adduser", (req, res) => {
   const values = [req.body.firstName, req.body.lastName];
   conn.query(
