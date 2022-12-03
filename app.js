@@ -11,7 +11,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("THE API IS WORKING FINE");
+  res.send("THE API IS WORKING FINE AND THE AUTOMATION IS AWSOME");
 });
 app.post("/adduser", (req, res) => {
   const values = [req.body.firstName, req.body.lastName];
