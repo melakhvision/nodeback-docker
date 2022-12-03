@@ -33,4 +33,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/nodebuild:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/nodebuild:latest
