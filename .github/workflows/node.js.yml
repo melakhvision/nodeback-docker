@@ -1,4 +1,4 @@
-name: Node.js CI
+name: 🚀 Node.js CI / CD PIPELINE name
 on:
   push:
     branches: [ "main" ]
