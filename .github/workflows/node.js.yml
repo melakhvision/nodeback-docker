@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
       - uses: actions/checkout@v3
@@ -31,8 +31,9 @@ jobs:
           method: "GET"
           log-response: false
       - name: "Use response"
-        run: echo ${{ steps.api.outputs.response }}
-      
+      - run: echo "::set-output name=data::${{ steps.api.outputs.response }}"
+
+    
   build:
     runs-on: ubuntu-latest
     needs: test
