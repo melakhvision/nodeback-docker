@@ -33,10 +33,6 @@ jobs:
       - name: "Use response"
         run: |
             echo "data=${{ steps.api.outputs.response }}" >> $GITHUB_ENV
-            echo "${{ env.data }}"
-            echo 'JSON_RESPONSE<<EOF' >> $GITHUB_ENV
-            curl https://example.com >> $GITHUB_ENV
-            echo 'EOF' >> $GITHUB_ENV
       
   build:
     runs-on: ubuntu-latest
