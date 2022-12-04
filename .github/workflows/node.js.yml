@@ -32,7 +32,7 @@ jobs:
           log-response: false
       - name: "Use response"
         run: |
-          echo ${{ steps.api.outputs.response }} $GITHUB_ENV
+          echo ${{ steps.api.outputs.response }} | jq '.' data.json
       
   build:
     runs-on: ubuntu-latest
