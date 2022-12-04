@@ -31,7 +31,10 @@ jobs:
           method: "GET"
           log-response: false
       - name: "Use response"
-        run: echo "::set-output name=data::thiane"
+        run: |
+            echo "::set-output name=data::thiane"
+            echo ${{ data }}
+        
 
     
   build:
