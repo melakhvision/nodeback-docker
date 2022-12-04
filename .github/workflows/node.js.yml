@@ -34,11 +34,6 @@ jobs:
         run: |
             echo "data=${{ steps.api.outputs.response }}" >> $GITHUB_ENV
             echo "${{ env.data }}"
-    
-      - uses: actions/javascript-action@v1
-        with:
-          milliseconds: 1000
-      - run: console.log(data)
       
   build:
     runs-on: ubuntu-latest
