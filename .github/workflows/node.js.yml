@@ -32,4 +32,5 @@ jobs:
           url: http://localhost:3000
           method: "GET"
           log-response: true
-          run: echo ${{ steps.api.outputs.data }}
+      - name: "Use response"
+        run: echo ${{ steps.api.outputs.response }}
