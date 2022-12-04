@@ -24,7 +24,7 @@ jobs:
       - run: npm install
       - run: npm run start &
       - name: "Call API"
-        uses: indiesdev/curl@v1.1
+      - uses: indiesdev/curl@v1.1
         id: api
         with:
           # The target URL
