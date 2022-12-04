@@ -36,7 +36,7 @@ jobs:
           touch data.json
           echo ${{ steps.api.outputs.response }} >> data.json
           cat data.json
-          grep -q AWSOME data.json
+          grep -q 'AWSOME' data.json
           
   build:
     runs-on: ubuntu-latest
