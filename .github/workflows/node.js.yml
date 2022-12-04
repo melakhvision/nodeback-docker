@@ -35,7 +35,6 @@ jobs:
         run: |
           touch data.json
           echo ${{ steps.api.outputs.response }} >> data.json
-          cat data.json
           grep -q 'WORKING' data.json
           
   build:
