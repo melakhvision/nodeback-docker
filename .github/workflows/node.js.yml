@@ -33,7 +33,8 @@ jobs:
       - name: "Use response"
         shell: bash
         run: |
-          echo "data_response=${{ steps.api.outputs.response }}" >> data.json
+          touch data.json
+          echo ${{ steps.api.outputs.response }} >> data.json
           
   build:
     runs-on: ubuntu-latest
