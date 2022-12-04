@@ -31,7 +31,10 @@ jobs:
           method: "GET"
           log-response: false
       - name: "Use response"
-        run: echo "data=thiane" >> $GITHUB_ENV
+        run: |
+          echo 'JSON_RESPONSE<<EOF' >> $GITHUB_ENV
+          curl https://example.com >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
       
   build:
     runs-on: ubuntu-latest
