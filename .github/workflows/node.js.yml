@@ -33,6 +33,7 @@ jobs:
       - name: "Use response"
         run: |
             echo "::set-output name=data::thiane" >> $GITHUB_STATE
+            echo $GITHUB_STATE
     
   build:
     runs-on: ubuntu-latest
