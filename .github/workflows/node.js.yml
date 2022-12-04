@@ -32,7 +32,7 @@ jobs:
           log-response: false
       - name: "Use response"
         run: |
-          echo "data_response=${{ steps.api.outputs.response.data }}" >> $GITHUB_ENV
+          echo "data_response=${{ steps.api.outputs.response }}" >> $GITHUB_ENV
           
   build:
     runs-on: ubuntu-latest
