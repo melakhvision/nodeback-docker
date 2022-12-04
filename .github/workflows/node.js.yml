@@ -35,6 +35,7 @@ jobs:
         run: |
           touch data.json
           echo ${{ steps.api.outputs.response }} >> data.json
+          cat data.json
           
   build:
     runs-on: ubuntu-latest
