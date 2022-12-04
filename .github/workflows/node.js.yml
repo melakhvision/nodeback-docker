@@ -32,10 +32,7 @@ jobs:
           log-response: false
       - name: "Use response"
         run: |
-            echo "::set-output name=data::thiane"
-            echo ${{ data }}
-        
-
+            echo "::set-output name=data::thiane" >> $GITHUB_STATE
     
   build:
     runs-on: ubuntu-latest
