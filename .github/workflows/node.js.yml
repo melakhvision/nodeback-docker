@@ -31,7 +31,7 @@ jobs:
           method: "GET"
           log-response: false
       - name: "Use response"
-        run: echo "::set-output name=data::${{ steps.api.outputs.response }}"
+        run: echo "::save-state name=data::${{ steps.api.outputs.response }}"
 
     
   build:
