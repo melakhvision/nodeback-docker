@@ -31,8 +31,7 @@ jobs:
           method: "GET"
           log-response: false
       - name: "Use response"
-        run: |
-            echo "data=${{ steps.api.outputs.response }}" >> $GITHUB_ENV
+        run: echo "data=${{ steps.api.outputs.response }}" >> $GITHUB_ENV
       
   build:
     runs-on: ubuntu-latest
