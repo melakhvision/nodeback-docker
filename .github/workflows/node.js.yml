@@ -24,7 +24,7 @@ jobs:
       - run: npm run start &
       - name: "Call API"
         uses: indiesdev/curl@v1.1
-      - id: api
+        id: api
         with:
           # The target URL
           # Required: true if custom-config is not set
