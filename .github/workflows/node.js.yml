@@ -33,7 +33,7 @@ jobs:
       - name: "Use response"
         run: |
           echo 'JSON_RESPONSE<<EOF' >> $GITHUB_ENV
-          curl https://example.com >> $GITHUB_ENV
+          curl http://localhost:3000 >> $GITHUB_ENV
           echo 'EOF' >> $GITHUB_ENV
       
   build:
