@@ -32,9 +32,7 @@ jobs:
           log-response: false
       - name: "Use response"
         run: |
-          echo 'JSON_RESPONSE<<EOF' >> $GITHUB_ENV
-          curl http://localhost:3000 >> $GITHUB_ENV
-          echo 'EOF' >> $GITHUB_ENV
+          echo ${{ steps.api.outputs.response }} $GITHUB_ENV
       
   build:
     runs-on: ubuntu-latest
