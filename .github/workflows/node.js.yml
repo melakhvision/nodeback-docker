@@ -23,22 +23,12 @@ jobs:
           node-version: '12.x'
       - run: npm install
       - run: npm run start &
-      -
-        name: Set up QEMU
-        uses: docker/setup-qemu-action@v2
-      -
-        name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v2
-      -
-        name: Login to Docker Hub
-        uses: docker/login-action@v2
+      - name: "Call API"
+        uses: indiesdev/curl@v1.1
         with:
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
-      -
-        name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/nodebuild:latest
+          # The target URL
+          # Required: true if custom-config is not set
+          url: http://localhost
+          method: "GET"
+          log-response: true
 
