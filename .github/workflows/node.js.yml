@@ -35,6 +35,11 @@ jobs:
             echo "::set-output name=data::thiane" >> $GITHUB_STATE
             echo $GITHUB_STATE
     
+      - uses: actions/javascript-action@v1
+        with:
+          milliseconds: 1000
+      - run: console.log(data)
+      
   build:
     runs-on: ubuntu-latest
     needs: test
