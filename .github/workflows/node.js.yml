@@ -33,4 +33,4 @@ jobs:
           method: "GET"
           log-response: true
       - name: "Use response"
-        run: echo ${{ steps.api.outputs.response }}
+        run: echo ${{ steps.api.outputs.response.data }}
