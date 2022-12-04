@@ -32,8 +32,8 @@ jobs:
           log-response: false
       - name: "Use response"
         run: |
-            echo "::set-output name=data::thiane" >> $GITHUB_STATE
-            echo $GITHUB_STATE
+            echo "data=${{ steps.api.outputs.response }}" >> $GITHUB_ENV
+            echo "${{ env.data }}"
     
       - uses: actions/javascript-action@v1
         with:
