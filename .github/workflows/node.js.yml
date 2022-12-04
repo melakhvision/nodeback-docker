@@ -32,7 +32,7 @@ jobs:
           log-response: false
       - name: "Use response"
         run: |
-          echo ${{ steps.api.outputs.response }} | jq '.' data.json
+          echo ${{ steps.api.outputs.response }} | jq '.' data
       
   build:
     runs-on: ubuntu-latest
