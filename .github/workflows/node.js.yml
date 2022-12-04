@@ -22,16 +22,16 @@ jobs:
       - run: npm install
       - run: npm run start &
       - name: "Call API"
-        uses: indiesdev/curl@v1.1
+      - uses: indiesdev/curl@v1.1
         id: api
         with:
           # The target URL
           # Required: true if custom-config is not set
           url: http://localhost:3000
           method: "GET"
-          log-response: true
+          log-response: false
       - name: "Use response"
-        run: echo ${{ steps.api.outputs }}
+        run: echo ${{ steps.api.outputs.response }}
       
   build:
     runs-on: ubuntu-latest
